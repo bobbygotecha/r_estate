@@ -13,8 +13,11 @@ include_once '../objects/api.php';
 // get database connection
 $database = new Database();
 $db = $database->getConnection();
-            $api = new API($db);
+$data = $_POST["data"];
 
+
+
+              $api = new API($db);
               $response = $api->savePropertyDetails($data);
               $result=array();
               $result["data"]=array();
